@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 📌 Video fonini o‘rnatish */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Video pastda bo‘lishi uchun */
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Video ekranga to‘liq sig‘adi */
+}
+
+/* 📌 Saytning qolgan qismlari */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    font-family: 'IM Fell English SC', serif;
+    color: white; /* Matn rangini oq qilish */
+}
+
+/* 🔥 EZY LOGOSI - KATTA BOSMA HARFLARDA */
+.logo {
+    font-size: 12vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+/* 🌍 Ijtimoiy tarmoqlar linklari - GORIZONTAL JOYLASH */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    padding: 10px;
+}
+
+.social-links a {
+    font-size: 2vw;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #8B4513;
+    text-decoration: underline;
+}
+
+/* 📱 Mobil qurilmalar uchun moslashtirish */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 15vw;
+    }
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .social-links a {
+        font-size: 5vw;
+    }
+}
